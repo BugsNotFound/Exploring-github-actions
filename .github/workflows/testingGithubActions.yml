@@ -13,8 +13,8 @@ jobs:
       - name: Copy files to aws s3
         env:
           S3_BUCKET: 'falcon-2.0'
-          RELEASE_VERSION: ${GITHUB_REF#refs/*/}
         run: |
+          RELEASE_VERSION: ${GITHUB_REF#refs/*/}
           echo "GITHUB_REF: $GITHUB_REF"
           echo "S3_BUCKET: $S3_BUCKET"
           echo "RELEASE_VERSION: $RELEASE_VERSION"
