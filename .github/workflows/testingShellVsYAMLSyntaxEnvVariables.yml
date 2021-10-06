@@ -21,7 +21,8 @@ jobs:
           echo "${{ env.WORKSPACE_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
-          history
+          history > deletethis.txt
+          cat deletethis.txt
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for windows'
