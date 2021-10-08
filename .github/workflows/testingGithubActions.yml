@@ -29,3 +29,5 @@ jobs:
           echo "GITHUB_SHA: $GITHUB_SHA"
           echo "GITHUB_REF: $GITHUB_REF"
           echo "HOME: $HOME"
+          sudo mkdir -p himansh/hey
+          ls -a -l
