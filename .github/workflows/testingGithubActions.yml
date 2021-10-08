@@ -18,7 +18,7 @@ jobs:
           echo "GITHUB_REF: $GITHUB_REF"
           echo "S3_BUCKET: $S3_BUCKET"
           echo "RELEASE_VERSION: $RELEASE_VERSION"
-          echo "RELEASE_VERSION_AGAIN: ${RELEASE_VERSION}"
+          echo "RELEASE_VERSION_AGAIN: $RELEASE_VERSION"
           echo "GITHUB_WORKFLOW: $GITHUB_WORKFLOW"
           echo "GITHUB_ACTION: $GITHUB_ACTION"
           echo "GITHUB_ACTOR: $GITHUB_ACTOR"
