@@ -31,3 +31,8 @@ jobs:
           echo "HOME: $HOME"
           sudo mkdir -p himansh/hey
           ls -a -l
+
+      - name: Dump github context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run:   echo "$GITHUB_CONTEXT"
