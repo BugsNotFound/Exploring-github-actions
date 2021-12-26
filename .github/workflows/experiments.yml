@@ -1,9 +1,7 @@
-name: CI
+name: Tags Workflow
 on:
-  create:
-    tags:
-      - '*'
-  workflow_dispatch:
+   push:
+    branches: [ testing2 ]
 
 jobs:
   job1:
@@ -15,9 +13,9 @@ jobs:
           GITHUB_REPOSITORY_OWNER=${{github.repository_owner}}
           GITHUB_COMMIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')
           GITHUB_TAG=${{github.ref_name}}
-          echo "$GITHUB_REPOSITORY"
+          echo "$GITHUB_REPOSITORY_OWNER"
           echo "$GITHUB_COMMIT_BRANCH"
-          echo $GITHUB_TAG
+          echo $GITHUB_TAG 
 
     
     
