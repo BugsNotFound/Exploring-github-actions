@@ -19,13 +19,6 @@ jobs:
           echo "$GITHUB_REPOSITORY_OWNER"
           echo "$GITHUB_COMMIT_BRANCH"
           echo $GITHUB_TAG 
-          echo "\n empty line"
-          raw=$(git branch -r --contains ${{ github.ref }})
-          branch=${raw/origin\/}
-          GIT_BRANCH=${branch//[[:space:]]/}
-          GIT_RELEASE=${GITHUB_REF##*/}
-          echo $GIT_BRANCH
-          echo $GIT_RELEASE
 
       - name: Dump github context
         env:
