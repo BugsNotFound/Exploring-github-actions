@@ -1,7 +1,7 @@
 name: Tags Workflow
 on:
    push:
-   branches: [ testing2 ]
+    branches: [ testing2 ]
 
 jobs:
   job1:
