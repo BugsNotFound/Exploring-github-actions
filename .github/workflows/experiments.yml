@@ -1,9 +1,7 @@
 name: Tags Workflow
 on:
-  create:
-    tags:
-      - '*'
-  workflow_dispatch:
+   push:
+   branches: [ testing2 ]
 
 jobs:
   job1:
