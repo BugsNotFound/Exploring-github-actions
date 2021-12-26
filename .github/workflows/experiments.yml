@@ -1,0 +1,19 @@
+name: CI
+on:
+  create:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+      - name: "Pushing binary to S3"
+        run: |
+          GITHUB_REPOSITORY_OWNER=${{github.repository_owner}}
+          GITHUB_COMMIT_BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')
+          GITHUB_TAG:${{github.ref_name}}
+          echo "$GITHUB_REPOSITORY"
+          echo "$GITHUB_COMMIT_BRANCH"
+          echo $GITHUB_TAG
+
+    
+    
