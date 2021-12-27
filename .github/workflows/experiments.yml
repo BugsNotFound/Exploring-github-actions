@@ -9,8 +9,11 @@ on:
 jobs:
   job1:
     name: Testing github env variables.
-    runs-on: macos-11
+    runs-on: ubuntu-latest
     steps: 
+      - name: "Checkout"
+        uses: actions/checkout@v1
+        
       - name: Testing github variables.
         run: |
           GITHUB_TAG=${{github.ref_name}}
